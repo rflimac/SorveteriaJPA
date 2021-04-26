@@ -75,7 +75,7 @@ public class App {
 				case (2):
 												
 					System.out.println("Informe o nome para remover: ");
-					String nomeRemove = sc.nextLine();
+					String nomeRemove = sc.next();
 					sorveteDAO.removerSorvete(nomeRemove);
 								
 					
