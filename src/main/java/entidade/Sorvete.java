@@ -79,8 +79,8 @@ public class Sorvete {
 
 	@Override
 	public String toString() {
-		return "Sorvete [nome=" + nome + ", tipo=" + tipo + ", marca=" + marca + ", ingredientes=" + ingredientes
-				+ ", validade=" + validade + ", fabricacao=" + fabricacao + "]";
+		return "Nome " + nome + ", tipo: " + tipo + ", marca =" + marca + ", ingredientes =" + ingredientes
+				+ ", validade =" + validade + ", fabricacao =" + fabricacao;
 	}
 
 	
