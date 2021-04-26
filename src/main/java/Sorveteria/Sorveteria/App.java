@@ -42,23 +42,23 @@ public class App {
 				
 				System.out.println("Digite os dados do Sorvete: ");
 				System.out.print("Nome: ");
-				String nomes = sc.nextLine();
+				String nomes = sc.next();
 				
 				
 				System.out.print("Tipo: ");
-				String tipos = sc.nextLine();
+				String tipos = sc.next();
 
 				System.out.print("Marca: ");
-				String marcas = sc.nextLine();
+				String marcas = sc.next();
 
 				System.out.print("Ingredientes: ");
-				String ingredientess = sc.nextLine();
+				String ingredientess = sc.next();
 
 				System.out.print("Validade: ");
-				String validades = sc.nextLine();
+				String validades = sc.next();
 
 				System.out.print("Fabricação: ");
-				String fabricacaos = sc.nextLine();
+				String fabricacaos = sc.next();
 
 				Sorvete sorvete = new Sorvete();
 				sorvete.setNome(nomes);
@@ -70,9 +70,6 @@ public class App {
 
 				sorveteDAO.adicionarSorvete(sorvete);
 				
-				
-				System.out.println("Sorvete inserido com sucesso!!!");
-					
 				break;
 				
 				case (2):

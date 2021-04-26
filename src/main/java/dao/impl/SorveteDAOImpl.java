@@ -17,7 +17,7 @@ public class SorveteDAOImpl implements SorveteDAO {
 	@Override
 	public void adicionarSorvete(Sorvete sorvete) {
 		try {
-			this.em = JpaUtil.getEntityManager();
+			this.em = new JpaUtil().getEntityManager();
 			et = em.getTransaction();
 			et.begin();
 			em.persist(sorvete);
@@ -40,7 +40,7 @@ public class SorveteDAOImpl implements SorveteDAO {
 	public void removerSorvete(String nomeRemove) {
 
 		try {
-			this.em = JpaUtil.getEntityManager();
+			this.em = new JpaUtil().getEntityManager();
 			et = em.getTransaction();
 			et.begin();
 			em.remove(em.find(Sorvete.class, nomeRemove));
@@ -62,7 +62,8 @@ public class SorveteDAOImpl implements SorveteDAO {
 
 	@Override
 	public List<Sorvete> listarSorvete() {
-		this.em = JpaUtil.getEntityManager();
+		this.em = new JpaUtil().getEntityManager();
+		//this.em = JpaUtil.getEntityManager();
 		Query query = em.createQuery("from Sorvete e");
 		List<Sorvete> listarSorvete = query.getResultList();
 		em.close();

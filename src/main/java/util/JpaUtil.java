@@ -6,11 +6,11 @@ import javax.persistence.Persistence;
 
 public class JpaUtil {
 
-	private static EntityManagerFactory factory;
+	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("PROJETOMV");
 	
-	static {
-		factory = Persistence.createEntityManagerFactory("PROJETOMV");
-	}
+	//static {
+	//	factory = Persistence.createEntityManagerFactory("PROJETOMV");
+	//}
 	
 	/**
 	 * Metodo responsavel por retornar um entityManager
